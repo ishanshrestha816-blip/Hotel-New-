@@ -1,0 +1,325 @@
+ <title>HotelSphere - Our Rooms</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f1;
+            color: #333;
+        }
+
+        /* Navigation bar */
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #967044;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        /* Page heading */
+
+        .heading {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #e9e2d8;
+        }
+
+        .heading h1 {
+            font-size: 38px;
+            color: #745331;
+            margin-bottom: 15px;
+        }
+
+        .heading p {
+            color: #555;
+        }
+
+        /* Room cards */
+
+        .room-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding: 50px 7%;
+        }
+
+        .room-card {
+            width: 320px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .room-details {
+            padding: 20px;
+        }
+
+        .room-details h2 {
+            color: #745331;
+            margin-bottom: 12px;
+        }
+
+        .room-details p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #967044;
+        }
+
+        .book-button {
+            display: inline-block;
+            background-color: #967044;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .book-button:hover {
+            background-color: #745331;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #252525;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .room-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <div class="logo">HotelSphere.</div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page introduction -->
+
+    <section class="heading">
+
+        <h1>Explore Our Rooms</h1>
+
+        <p>
+            Find the perfect room for your stay.
+            Comfort and relaxation are waiting for you.
+        </p>
+
+    </section>
+
+
+    <!-- Available room types -->
+
+    <section class="room-container">
+
+
+        <!-- Standard room -->
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
+                 alt="Standard hotel room">
+
+            <div class="room-details">
+
+                <h2>Standard Room</h2>
+
+                <p>
+                    A comfortable room with a cosy bed,
+                    private bathroom and modern facilities.
+                    Suitable for one or two guests.
+                </p>
+
+                <p>Free Wi-Fi | Air Conditioning | TV</p>
+
+                <div class="price">£60 / night</div>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Deluxe room -->
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
+                 alt="Deluxe hotel room">
+
+            <div class="room-details">
+
+                <h2>Deluxe Room</h2>
+
+                <p>
+                    Enjoy extra space, elegant decoration
+                    and a comfortable atmosphere for
+                    a relaxing hotel experience.
+                </p>
+
+                <p>Free Wi-Fi | Mini Bar | Room Service</p>
+
+                <div class="price">£90 / night</div>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Family room -->
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=900&q=80"
+                 alt="Family hotel room">
+
+            <div class="room-details">
+
+                <h2>Family Room</h2>
+
+                <p>
+                    A spacious room with comfortable beds
+                    and enough space for families travelling
+                    together.
+                </p>
+
+                <p>Free Wi-Fi | Family Space | TV</p>
+
+                <div class="price">£120 / night</div>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Executive room -->
+
+        <div class="room-card">
+
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
+                 alt="Executive hotel room">
+
+            <div class="room-details">
+
+                <h2>Executive Room</h2>
+
+                <p>
+                    A stylish room designed for business
+                    travellers who want extra comfort
+                    and a peaceful environment.
+                </p>
+
+                <p>Free Wi-Fi | Work Desk | Room Service</p>
+
+                <div class="price">£150 / night</div>
+
+                <a href="booking.html" class="book-button">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>HotelSphere</h3>
+
+        <p>Enjoy comfort, luxury and excellent hospitality.</p>
+
+        <p>&copy; 2026 HotelSphere. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>
