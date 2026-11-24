@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HotelSphere - Home</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f1;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #967044;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        .hero {
+            height: 550px;
+            background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .hero-text {
+            color: white;
+            max-width: 550px;
+            background-color: rgba(0,0,0,0.35);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #967044;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #745331;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #967044;
+        }
+
+        .section p {
+            line-height: 1.7;
+        }
+
+        .rooms {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .room {
+            background-color: white;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .room img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room h3 {
+            margin: 15px;
+        }
+
+        .room p {
+            margin: 10px 15px;
+        }
+
+        .room a {
+            margin: 15px;
+        }
+
+        .facilities {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .facility {
+            background-color: white;
+            padding: 25px;
+            width: 220px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #252525;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero {
+                padding: 20px;
+                height: 450px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+
+    <header>
+
+        <div class="logo">HotelSphere.</div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main hotel picture -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Discover Your Perfect Stay</h1>
+
+            <p>
+                Experience comfort, luxury and excellent hospitality
+                at HotelSphere. Enjoy a relaxing stay with beautiful
+                rooms and outstanding services.
+            </p>
+
+            <a href="rooms.html" class="button">Explore Our Rooms</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About hotel -->
+
+    <section class="section">
+
+        <h2>Welcome to HotelSphere</h2>
+
+        <p>
+            HotelSphere is a place where comfort meets hospitality.
+            Whether you are travelling for business or relaxation,
+            we aim to make your stay special.
+        </p>
+
+    </section>
+
+
+    <!-- Room section -->
+
+    <section class="section">
+
+        <h2>Our Popular Rooms</h2>
+
+        <p>Choose the room that is right for your stay.</p>
+
+        <div class="rooms">
+
+            <div class="room">
+
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80"
+                     alt="Standard hotel bedroom">
+
+                <h3>Standard Room</h3>
+
+                <p>Comfortable room for a relaxing stay.</p>
+
+                <p><strong>From £60 per night</strong></p>
+
+                <a href="booking.html" class="button">Book Now</a>
+
+            </div>
+
+
+            <div class="room">
+
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80"
+                     alt="Deluxe hotel bedroom">
+
+                <h3>Deluxe Room</h3>
+
+                <p>Enjoy extra space and modern facilities.</p>
+
+                <p><strong>From £90 per night</strong></p>
+
+                <a href="booking.html" class="button">Book Now</a>
+
+            </div>
+
+
+            <div class="room">
+
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
+                     alt="Family hotel bedroom">
+
+                <h3>Family Room</h3>
+
+                <p>A spacious room suitable for families.</p>
+
+                <p><strong>From £120 per night</strong></p>
+
+                <a href="booking.html" class="button">Book Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Hotel facilities -->
+
+    <section class="section">
+
+        <h2>Our Facilities</h2>
+
+        <div class="facilities">
+
+            <div class="facility">
+                <h3>Swimming Pool</h3>
+                <p>Relax and enjoy our swimming facilities.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Restaurant</h3>
+                <p>Enjoy delicious meals during your stay.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Free Wi-Fi</h3>
+                <p>Stay connected throughout your visit.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Room Service</h3>
+                <p>Get assistance whenever you need it.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>HotelSphere</h3>
+
+        <p>Thank you for choosing HotelSphere.</p>
+
+        <p>&copy; 2026 HotelSphere. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>

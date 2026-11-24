@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HotelSphere | Welcome</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f4f1ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 650px;
+            display: flex;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .hotel-image {
+            width: 50%;
+            background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            padding: 45px;
+        }
+
+        .image-text {
+            background: rgba(0,0,0,0.35);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .image-text h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .image-text p {
+            line-height: 1.6;
+        }
+
+        .form-section {
+            width: 50%;
+            padding: 55px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            color: #9b7548;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .small-text {
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+        }
+
+        .tabs button {
+            width: 50%;
+            padding: 13px;
+            border: none;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .tabs button.active {
+            color: #9b7548;
+            border-bottom: 3px solid #9b7548;
+            font-weight: bold;
+        }
+
+        .form-box h2 {
+            color: #292929;
+            margin-bottom: 10px;
+        }
+
+        .form-box p {
+            color: #777;
+            margin-bottom: 22px;
+            font-size: 14px;
+        }
+
+        .form-box label {
+            display: block;
+            margin-bottom: 7px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .form-box input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .form-box input:focus {
+            outline: none;
+            border-color: #9b7548;
+        }
+
+        .main-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            background-color: #9b7548;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .main-button:hover {
+            background-color: #785832;
+        }
+
+        .extra-text {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-top: 25px;
+        }
+
+        .form-box {
+            display: none;
+        }
+
+        .form-box.show {
+            display: block;
+        }
+
+        #message {
+            color: #287a43;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .main-container {
+                flex-direction: column;
+            }
+
+            .hotel-image {
+                width: 100%;
+                min-height: 250px;
+                padding: 25px;
+            }
+
+            .form-section {
+                width: 100%;
+                padding: 35px 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Hotel picture and welcome message -->
+
+        <div class="hotel-image">
+
+            <div class="image-text">
+
+                <h2>Welcome to HotelSphere</h2>
+
+                <p>
+                    Experience comfort, luxury and unforgettable
+                    hospitality. Your perfect stay starts here.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Login and sign up section -->
+
+        <div class="form-section">
+
+            <div class="logo">HotelSphere.</div>
+
+            <p class="small-text">
+                Your stay, our priority.
+            </p>
+
+
+            <!-- Buttons to change between forms -->
+
+            <div class="tabs">
+
+                <button id="login-tab" class="active"
+                    onclick="showLogin()">
+                    Login
+                </button>
+
+                <button id="signup-tab"
+                    onclick="showSignup()">
+                    Sign Up
+                </button>
+
+            </div>
+
+
+            <!-- Login form -->
+
+            <div id="login-form" class="form-box show">
+
+                <h2>Welcome Back!</h2>
+
+                <p>Please enter your details to continue.</p>
+
+                <form onsubmit="return loginUser(event)">
+
+                    <label for="login-email">Email Address</label>
+
+                    <input type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label for="login-password">Password</label>
+
+                    <input type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        required>
+
+                    <button type="submit" class="main-button">
+                        Login
+                    </button>
+
+                </form>
+
+                <div class="extra-text">
+                    Don't have an account?
+                    <a href="#" onclick="showSignup()">Sign Up</a>
+                </div>
+
+            </div>
+
+
+            <!-- Sign up form -->
+
+            <div id="signup-form" class="form-box">
+
+                <h2>Create an Account</h2>
+
+                <p>Join HotelSphere and plan your next stay.</p>
+
+                <form onsubmit="return signupUser(event)">
+
+                    <label for="full-name">Full Name</label>
+
+                    <input type="text"
+                        id="full-name"
+                        placeholder="Enter your full name"
+                        required>
+
+
+                    <label for="signup-email">Email Address</label>
+
+                    <input type="email"
+                        id="signup-email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label for="signup-password">Create Password</label>
+
+                    <input type="password"
+                        id="signup-password"
+                        placeholder="Create a password"
+                        minlength="6"
+                        required>
+
+
+                    <label for="confirm-password">Confirm Password</label>
+
+                    <input type="password"
+                        id="confirm-password"
+                        placeholder="Confirm your password"
+                        minlength="6"
+                        required>
+
+
+                    <button type="submit" class="main-button">
+                        Create Account
+                    </button>
+
+                </form>
+
+                <div class="extra-text">
+                    Already have an account?
+                    <a href="#" onclick="showLogin()">Login</a>
+                </div>
+
+            </div>
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Simple JavaScript for switching forms -->
+
+    <script>
+
+        function showLogin() {
+
+            document.getElementById("login-form").classList.add("show");
+
+            document.getElementById("signup-form").classList.remove("show");
+
+            document.getElementById("login-tab").classList.add("active");
+
+            document.getElementById("signup-tab").classList.remove("active");
+
+            document.getElementById("message").innerHTML = "";
+
+        }
+
+
+        function showSignup() {
+
+            document.getElementById("signup-form").classList.add("show");
+
+            document.getElementById("login-form").classList.remove("show");
+
+            document.getElementById("signup-tab").classList.add("active");
+
+            document.getElementById("login-tab").classList.remove("active");
+
+            document.getElementById("message").innerHTML = "";
+
+        }
+
+
+        function loginUser(event) {
+
+            event.preventDefault();
+
+            document.getElementById("message").innerHTML =
+                "Login form is working. Database connection is still needed.";
+
+        }
+
+
+        function signupUser(event) {
+
+            event.preventDefault();
+
+            var password = document.getElementById("signup-password").value;
+
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password != confirmPassword) {
+
+                document.getElementById("message").innerHTML =
+                    "Passwords do not match.";
+
+                return false;
+
+            }
+
+            document.getElementById("message").innerHTML =
+                "Sign up form is working. Database connection is still needed.";
+
+            return false;
+
+        }
+
+    </script>
+
+</body>
+</html>
