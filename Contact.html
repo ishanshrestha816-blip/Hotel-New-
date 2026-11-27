@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HotelSphere - Contact Us</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f1;
+            color: #333;
+        }
+
+        /* Navigation bar */
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #967044;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        /* Contact hero section */
+
+        .hero {
+            height: 400px;
+            background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero-text {
+            color: white;
+            max-width: 650px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 35px;
+            border-radius: 8px;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* Main section */
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #967044;
+        }
+
+        .section > p {
+            line-height: 1.7;
+        }
+
+        /* Contact layout */
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .contact-info {
+            background-color: white;
+            width: 350px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            color: #967044;
+            font-size: 23px;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item h4 {
+            margin-bottom: 8px;
+            color: #967044;
+        }
+
+        .info-item p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Contact form */
+
+        .contact-form {
+            background-color: white;
+            width: 550px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            color: #967044;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            font-size: 14px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #967044;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #967044;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .button:hover {
+            background-color: #745331;
+        }
+
+        #message {
+            color: #287a43;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Hotel image section */
+
+        .hotel-image {
+            margin-top: 35px;
+            height: 300px;
+            background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85");
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #252525;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin-top: 8px;
+        }
+
+        /* Mobile responsive design */
+
+        @media screen and (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .hero {
+                height: 350px;
+                padding: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+
+            .section {
+                padding: 40px 5%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+
+    <header>
+
+        <div class="logo">HotelSphere.</div>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+            <a href="about.html">About Us</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Contact hero section -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Contact HotelSphere</h1>
+
+            <p>
+                We are here to help make your stay special.
+                Get in touch with our team for enquiries,
+                assistance or any questions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact information and form -->
+
+    <section class="section">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+            Have a question or need assistance?
+            We would love to hear from you.
+        </p>
+
+        <div class="contact-container">
+
+            <!-- Contact details -->
+
+            <div class="contact-info">
+
+                <h3>Contact Information</h3>
+
+                <div class="info-item">
+                    <h4>Address</h4>
+                    <p>
+                        Hotel Sphere <br>
+                        London, United Kingdom
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Phone Number</h4>
+                    <p>+44 7358963214</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Email Address</h4>
+                    <p>sphere2stay@gmail.com</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Opening Hours</h4>
+                    <p>
+                        Monday - Sunday<br>
+                        Available 24 Hours
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Contact form -->
+
+            <div class="contact-form">
+
+                <h3>Send Us a Message</h3>
+
+                <form onsubmit="return sendMessage(event)">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <label for="subject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter message subject"
+                        required
+                    >
+
+                    <label for="message-text">Your Message</label>
+
+                    <textarea
+                        id="message-text"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="button">
+                        Send Message
+                    </button>
+
+                </form>
+
+                <p id="message"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Hotel restaurant picture -->
+
+    <section class="section">
+
+        <h2>We Look Forward to Welcoming You</h2>
+
+        <p>
+            At HotelSphere, your comfort and satisfaction
+            are our priority. Our team is always ready
+            to assist you.
+        </p>
+
+        <div class="hotel-image"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>HotelSphere</h3>
+
+        <p>Thank you for choosing HotelSphere.</p>
+
+        <p>&copy; 2026 HotelSphere. All rights reserved.</p>
+
+    </footer>
+
+
+    <!-- Contact form JavaScript -->
+
+    <script>
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            document.getElementById("message").innerHTML =
+                "Thank you for contacting HotelSphere! Your message has been received in this demo.";
+
+            document.querySelector(".contact-form form").reset();
+
+            return false;
+
+        }
+
+    </script>
+
+</body>
+</html>

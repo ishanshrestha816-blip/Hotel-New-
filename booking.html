@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelSphere | Book a Room</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f1;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            color: #333;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h2 {
+            color: #967044;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        .hero {
+            height: 220px;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .booking-container {
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .booking-container h2 {
+            color: #967044;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .booking-container .description {
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #967044;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #967044;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #745331;
+        }
+
+        footer {
+            background-color: #252525;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .booking-container {
+                margin: 25px 15px;
+                padding: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>HotelSphere.</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Book Your Stay</h1>
+            <p>Complete your details to request a reservation.</p>
+        </div>
+    </section>
+
+    <div class="booking-container">
+
+        <h2>Reservation Form</h2>
+
+        <p class="description">
+            Please provide your details and booking requirements.
+        </p>
+
+        <form id="bookingForm">
+
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone"
+                           placeholder="Enter your phone number" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="checkin">Check-in Date</label>
+                    <input type="date" id="checkin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="checkout">Check-out Date</label>
+                    <input type="date" id="checkout" required>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="room">Room Type</label>
+                    <select id="room" required>
+                        <option value="">Select a room</option>
+                        <option value="Standard">Standard Room</option>
+                        <option value="Deluxe">Deluxe Room</option>
+                        <option value="Family">Family Room</option>
+                        <option value="Executive">Executive Room</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" rows="4"
+                    placeholder="Any additional requests?"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">
+                Submit Booking Request
+            </button>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HotelSphere. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        var today = new Date().toISOString().split("T")[0];
+
+        document.getElementById("checkin").min = today;
+        document.getElementById("checkout").min = today;
+
+        document.getElementById("checkin").addEventListener("change", function() {
+
+            document.getElementById("checkout").min = this.value;
+
+            if (document.getElementById("checkout").value &&
+                document.getElementById("checkout").value <= this.value) {
+
+                document.getElementById("checkout").value = "";
+            }
+        });
+
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            var checkin = document.getElementById("checkin").value;
+            var checkout = document.getElementById("checkout").value;
+
+            if (checkout <= checkin) {
+                alert("Check-out date must be after check-in date.");
+                return;
+            }
+
+            alert("Your booking request has been submitted successfully!");
+
+            this.reset();
+
+            document.getElementById("checkin").min = today;
+            document.getElementById("checkout").min = today;
+        });
+    </script>
+
+</body>
+</html>

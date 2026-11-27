@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelSphere | About Us</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f1;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h2 {
+            color: #967044;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        .hero {
+            height: 300px;
+            background:
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin-bottom: 45px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .about-section img {
+            width: 45%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            color: #967044;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .mission {
+            background-color: white;
+            padding: 35px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 45px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+        }
+
+        .mission h2 {
+            color: #967044;
+            margin-bottom: 15px;
+        }
+
+        .mission p {
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-button {
+            display: inline-block;
+            background-color: #967044;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .about-button:hover {
+            background-color: #745331;
+        }
+
+        footer {
+            background-color: #252525;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                gap: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .about-section {
+                flex-direction: column;
+            }
+
+            .about-section img {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>HotelSphere.</h2>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>About HotelSphere</h1>
+            <p>Comfort, relaxation and a welcoming stay.</p>
+        </div>
+    </section>
+
+    <main class="about-container">
+
+        <section class="about-section">
+
+            <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                alt="Hotel exterior and swimming pool">
+
+            <div class="about-text">
+                <h2>Welcome to HotelSphere</h2>
+
+                <p>
+                    Welcome to HotelSphere, your destination for a
+                    comfortable and relaxing hotel experience.
+                    We aim to provide guests with a welcoming
+                    environment where they can enjoy their stay.
+                </p>
+
+                <p>
+                    Whether you are travelling for business,
+                    enjoying a holiday or spending time with family,
+                    HotelSphere is designed to make your stay
+                    comfortable and memorable.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="about-section">
+
+            <div class="about-text">
+                <h2>Our Hospitality</h2>
+
+                <p>
+                    At HotelSphere, we believe that good hospitality
+                    starts with making every guest feel welcome.
+                </p>
+
+                <p>
+                    Our aim is to provide a pleasant atmosphere,
+                    comfortable accommodation and helpful service
+                    throughout the guest experience.
+                </p>
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32"
+                alt="Comfortable hotel bedroom">
+
+        </section>
+
+        <section class="mission">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to offer guests a comfortable,
+                enjoyable and welcoming place to stay.
+                We aim to make every visit a positive experience
+                through quality accommodation and friendly hospitality.
+            </p>
+
+            <a href="rooms.html" class="about-button">
+                Explore Our Rooms
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HotelSphere. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

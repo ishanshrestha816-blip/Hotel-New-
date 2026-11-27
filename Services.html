@@ -1,11 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HotelSphere | Our Services</title>
+
+    <title>HotelSphere - Our Services</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -14,168 +18,245 @@
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #f7f5f1;
             color: #333;
         }
 
+        /* Navigation bar */
+
         header {
-            background-color: #172b3a;
-            color: white;
+            background-color: white;
             padding: 20px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
 
-        header h2 {
-            color: #e6b566;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #e6b566;
-        }
-
-        .hero {
-            height: 300px;
-            background:
-                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
-
-        .hero p {
-            font-size: 17px;
-        }
-
-        .intro {
-            text-align: center;
-            padding: 45px 20px 25px;
-        }
-
-        .intro h2 {
-            color: #172b3a;
-            margin-bottom: 12px;
-        }
-
-        .intro p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .services {
-            padding: 30px 7% 60px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-        }
-
-        .service-card .content {
-            padding: 20px;
-        }
-
-        .service-card h3 {
-            color: #172b3a;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.5;
-            font-size: 14px;
-        }
-
-        .booking-section {
-            background-color: #172b3a;
-            color: white;
-            text-align: center;
-            padding: 45px 20px;
-        }
-
-        .booking-section h2 {
-            margin-bottom: 12px;
-        }
-
-        .booking-section a {
-            display: inline-block;
-            margin-top: 18px;
-            background-color: #e6b566;
-            color: #172b3a;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
+        .logo {
+            color: #967044;
+            font-size: 27px;
             font-weight: bold;
         }
 
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #967044;
+        }
+
+        /* Hero section */
+
+        .hero {
+            height: 400px;
+            background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero-text {
+            color: white;
+            max-width: 650px;
+            background-color: rgba(0,0,0,0.4);
+            padding: 35px;
+            border-radius: 8px;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* General section */
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #967044;
+        }
+
+        .section > p {
+            line-height: 1.7;
+        }
+
+        /* Service cards */
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: white;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            padding-bottom: 20px;
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service h3 {
+            margin: 18px 15px 10px;
+            color: #967044;
+        }
+
+        .service p {
+            margin: 10px 15px;
+            line-height: 1.6;
+        }
+
+        /* Additional facilities */
+
+        .facilities {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .facility {
+            background-color: white;
+            padding: 25px;
+            width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .facility h3 {
+            color: #967044;
+            margin-bottom: 10px;
+        }
+
+        .facility p {
+            line-height: 1.6;
+        }
+
+        /* Button */
+
+        .button {
+            display: inline-block;
+            background-color: #967044;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #745331;
+        }
+
+        /* Booking invitation */
+
+        .booking-section {
+            background-color: white;
+            padding: 45px 20px;
+            text-align: center;
+            margin: 20px 8% 60px;
+            border-radius: 8px;
+        }
+
+        .booking-section h2 {
+            color: #967044;
+            margin-bottom: 15px;
+        }
+
+        .booking-section p {
+            line-height: 1.7;
+        }
+
+        /* Footer */
+
         footer {
-            background-color: #101f2a;
+            background-color: #252525;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
+            margin-top: 30px;
         }
 
-        @media (max-width: 800px) {
-            .services {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        footer p {
+            margin-top: 8px;
         }
 
-        @media (max-width: 550px) {
-            .services {
-                grid-template-columns: 1fr;
-            }
+        /* Mobile responsive design */
+
+        @media screen and (max-width: 700px) {
 
             header {
-                gap: 15px;
+                flex-direction: column;
+                gap: 20px;
             }
 
             nav a {
                 display: inline-block;
-                margin: 5px;
+                margin: 8px;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .hero {
+                height: 350px;
+                padding: 20px;
             }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .section {
+                padding: 40px 5%;
+            }
+
+            .service {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .booking-section {
+                margin: 20px 5% 40px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- Navigation bar -->
+
     <header>
-        <h2>HotelSphere</h2>
+
+        <div class="logo">HotelSphere.</div>
 
         <nav>
             <a href="home.html">Home</a>
@@ -184,96 +265,215 @@
             <a href="booking.html">Booking</a>
             <a href="contact.html">Contact</a>
             <a href="index.html">Logout</a>
+            <a href="about.html">About Us</a>
         </nav>
+
     </header>
 
+
+    <!-- Hero section -->
+
     <section class="hero">
-        <div>
-            <h1>Our Services</h1>
-            <p>Enjoy comfort, relaxation and excellent hospitality.</p>
+
+        <div class="hero-text">
+
+            <h1>Our Hotel Services</h1>
+
+            <p>
+                Enjoy excellent facilities and services
+                designed to make your stay comfortable,
+                relaxing and memorable.
+            </p>
+
         </div>
+
     </section>
 
-    <section class="intro">
-        <h2>Experience the Best of HotelSphere</h2>
+
+    <!-- Introduction -->
+
+    <section class="section">
+
+        <h2>Experience Our Services</h2>
+
         <p>
-            We provide a range of facilities and services to make
-            your stay comfortable, relaxing and memorable.
+            At HotelSphere, we aim to provide everything
+            you need for an enjoyable hotel experience.
+            Discover the services available to our guests.
         </p>
-    </section>
 
-    <section class="services">
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
-                 alt="Hotel restaurant">
-            <div class="content">
+        <!-- Main service cards -->
+
+        <div class="services">
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel restaurant"
+                >
+
                 <h3>Restaurant</h3>
-                <p>Enjoy delicious meals and a variety of food options
-                in our comfortable hotel restaurant.</p>
-            </div>
-        </div>
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7"
-                 alt="Swimming pool">
-            <div class="content">
+                <p>
+                    Enjoy delicious meals and a welcoming
+                    dining atmosphere during your stay.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel swimming pool"
+                >
+
                 <h3>Swimming Pool</h3>
-                <p>Relax and refresh yourself in our swimming pool
-                during your stay.</p>
-            </div>
-        </div>
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef"
-                 alt="Spa treatment">
-            <div class="content">
+                <p>
+                    Relax and refresh yourself in our
+                    swimming pool facilities.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel spa"
+                >
+
                 <h3>Spa and Wellness</h3>
-                <p>Enjoy a peaceful environment with relaxing spa
-                treatments and wellness facilities.</p>
-            </div>
-        </div>
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48"
-                 alt="Fitness gym">
-            <div class="content">
+                <p>
+                    Take time to relax and enjoy a peaceful
+                    wellness experience.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel gym"
+                >
+
                 <h3>Fitness Centre</h3>
-                <p>Keep active during your stay with access to
-                our fitness and exercise facilities.</p>
-            </div>
-        </div>
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
-                 alt="Hotel room service">
-            <div class="content">
+                <p>
+                    Keep active during your stay with
+                    access to fitness facilities.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel room service"
+                >
+
                 <h3>Room Service</h3>
-                <p>Enjoy convenient service and assistance
-                from the comfort of your room.</p>
+
+                <p>
+                    Enjoy convenient assistance and
+                    services from the comfort of your room.
+                </p>
+
             </div>
+
+
+            <div class="service">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                    alt="Hotel business facilities"
+                >
+
+                <h3>Business Facilities</h3>
+
+                <p>
+                    Make use of convenient spaces
+                    for working and business activities.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="service-card">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
-                 alt="Hotel workspace">
-            <div class="content">
+    </section>
+
+
+    <!-- Additional facilities -->
+
+    <section class="section">
+
+        <h2>More Facilities for Our Guests</h2>
+
+        <div class="facilities">
+
+            <div class="facility">
                 <h3>Free Wi-Fi</h3>
-                <p>Stay connected with internet access
-                throughout your hotel stay.</p>
+                <p>Stay connected throughout your visit.</p>
             </div>
+
+            <div class="facility">
+                <h3>24-Hour Reception</h3>
+                <p>Our reception team is available to assist you.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Housekeeping</h3>
+                <p>Enjoy clean and comfortable accommodation.</p>
+            </div>
+
+            <div class="facility">
+                <h3>Laundry Service</h3>
+                <p>Convenient laundry assistance for guests.</p>
+            </div>
+
         </div>
 
     </section>
 
-    <section class="booking-section">
-        <h2>Ready to Enjoy Your Stay?</h2>
-        <p>Explore our rooms and make your reservation today.</p>
-        <a href="booking.html">Book Your Stay</a>
-    </section>
+
+    <!-- Booking invitation -->
+
+    <div class="booking-section">
+
+        <h2>Enjoy Your Stay at HotelSphere</h2>
+
+        <p>
+            Book your room today and experience
+            our hospitality and facilities.
+        </p>
+
+        <a href="booking.html" class="button">
+            Book Your Stay
+        </a>
+
+    </div>
+
+
+    <!-- Footer -->
 
     <footer>
-        <p>&copy; 2026 HotelSphere. All Rights Reserved.</p>
+
+        <h3>HotelSphere</h3>
+
+        <p>Thank you for choosing HotelSphere.</p>
+
+        <p>&copy; 2026 HotelSphere. All rights reserved.</p>
+
     </footer>
 
 </body>
